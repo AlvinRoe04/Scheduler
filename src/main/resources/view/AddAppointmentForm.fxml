@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="484.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.controller.AddAppointmentController">
+   <children>
+      <Text layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Appointment" textAlignment="CENTER" wrappingWidth="688.0">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Text>
+      <Text layoutX="121.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="60.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" textAlignment="RIGHT" wrappingWidth="76.353515625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="64.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" textAlignment="RIGHT" wrappingWidth="76.353515625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact ID" textAlignment="RIGHT" wrappingWidth="98.01171875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="34.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID" textAlignment="RIGHT" wrappingWidth="110.501953125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="4.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" textAlignment="RIGHT" wrappingWidth="136.318359375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="61.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="RIGHT" wrappingWidth="80.501953125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField disable="true" layoutX="145.0" layoutY="87.0" prefHeight="25.0" prefWidth="308.0" promptText="Auto Generated" />
+      <TextField fx:id="titleField" layoutX="146.0" layoutY="122.0" onKeyTyped="#validateData" prefHeight="25.0" prefWidth="308.0" />
+      <TextField fx:id="locationField" layoutX="147.0" layoutY="157.0" onKeyTyped="#validateData" prefHeight="25.0" prefWidth="308.0" />
+      <Button layoutX="219.0" layoutY="406.0" mnemonicParsing="false" onAction="#onSavePressed" prefHeight="27.0" prefWidth="98.0" text="Save">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="380.0" layoutY="406.0" mnemonicParsing="false" onAction="#onCancelPressed" prefHeight="27.0" prefWidth="98.0" text="Cancel">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Text layoutX="33.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" textAlignment="RIGHT" wrappingWidth="110.501953125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="325.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date" textAlignment="RIGHT" wrappingWidth="110.501953125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="34.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time" textAlignment="RIGHT" wrappingWidth="110.501953125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="325.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time" textAlignment="RIGHT" wrappingWidth="110.501953125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="typeField" layoutX="148.0" layoutY="192.0" onKeyTyped="#validateData" prefHeight="25.0" prefWidth="308.0" />
+      <ComboBox fx:id="contactIDBox" layoutX="150.0" layoutY="263.0" prefHeight="25.0" prefWidth="308.0" />
+      <ComboBox fx:id="customerIDBox" layoutX="151.0" layoutY="298.0" prefHeight="25.0" prefWidth="308.0" />
+      <DatePicker fx:id="startDatePicker" editable="false" layoutX="151.0" layoutY="332.0" onAction="#validateData" />
+      <DatePicker fx:id="endDatePicker" editable="false" layoutX="441.0" layoutY="332.0" onAction="#validateData" onKeyTyped="#validateData" />
+      <TextField fx:id="startHourField" layoutX="151.0" layoutY="363.0" prefHeight="25.0" prefWidth="38.0" promptText="HH" />
+      <TextField fx:id="startMinuteField" layoutX="200.0" layoutY="363.0" prefHeight="25.0" prefWidth="38.0" promptText="MM" />
+      <Text layoutX="193.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="startTODCombo" layoutX="249.0" layoutY="363.0" prefHeight="25.0" prefWidth="61.0" />
+      <TextField fx:id="endHourField" layoutX="441.0" layoutY="365.0" prefHeight="25.0" prefWidth="38.0" promptText="HH" />
+      <TextField fx:id="endMinuteField" layoutX="490.0" layoutY="365.0" prefHeight="25.0" prefWidth="38.0" promptText="MM" />
+      <Text layoutX="483.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="endTODCombo" layoutX="539.0" layoutY="365.0" prefHeight="25.0" prefWidth="61.0" />
+      <TextField fx:id="descriptionField" layoutX="149.0" layoutY="228.0" onKeyTyped="#validateData" prefHeight="25.0" prefWidth="308.0" />
+      <Text fx:id="titleErrorText" fill="RED" layoutX="480.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="locationErrorText" fill="RED" layoutX="480.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="typeErrorText" fill="RED" layoutX="480.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="descriptionErrorText" fill="RED" layoutX="480.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

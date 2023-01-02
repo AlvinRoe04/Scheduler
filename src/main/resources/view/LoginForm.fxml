@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.controller.LoginController">
+   <children>
+      <Text fx:id="loginTitle" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="371.0">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Text>
+      <Text fx:id="userText" layoutX="29.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" textAlignment="RIGHT" wrappingWidth="105.978515625" />
+      <Text fx:id="passwordText" layoutX="29.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" textAlignment="RIGHT" wrappingWidth="105.978515625" />
+      <Text fx:id="locationLabel" layoutX="193.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location Label" textAlignment="RIGHT" wrappingWidth="173.400390625" />
+      <TextField fx:id="userName" layoutX="149.0" layoutY="133.0" />
+      <PasswordField fx:id="password" layoutX="149.0" layoutY="175.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="loginButton" layoutX="249.0" layoutY="234.0" mnemonicParsing="false" onAction="#onLoginPressed" text="Login" />
+   </children>
+</AnchorPane>

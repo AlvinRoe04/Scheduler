@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="909.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.controller.ScheduleController">
+   <children>
+      <RadioButton fx:id="viewAll" layoutX="107.0" layoutY="35.0" mnemonicParsing="false" onAction="#onViewAll" selected="true" text="View All" />
+      <RadioButton fx:id="viewWeek" layoutX="194.0" layoutY="35.0" mnemonicParsing="false" onAction="#onViewWeek" text="View by Week" />
+      <RadioButton fx:id="viewMonth" layoutX="319.0" layoutY="35.0" mnemonicParsing="false" onAction="#onViewMonth" text="View by Month" />
+      <TableView fx:id="appointmentTable" layoutY="100.0" prefHeight="700.0" prefWidth="1139.0">
+        <columns>
+          <TableColumn fx:id="appointmentID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="title" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="description" prefWidth="299.0" text="Description" />
+            <TableColumn fx:id="location" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="contact" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="startDate" prefWidth="75.0" text="Start Date" />
+            <TableColumn fx:id="startTime" prefWidth="75.0" text="Start Time" />
+            <TableColumn fx:id="endDate" prefWidth="75.0" text="End Date" />
+            <TableColumn fx:id="endTime" prefWidth="75.0" text="End Time" />
+            <TableColumn fx:id="userID" prefWidth="75.0" text="User ID" />
+            <TableColumn fx:id="customerID" prefWidth="75.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="828.0" layoutY="31.0" mnemonicParsing="false" onAction="#onReportsPressed" prefHeight="25.0" prefWidth="124.0" text="Reports" />
+      <Button layoutX="359.0" layoutY="835.0" mnemonicParsing="false" onAction="#onAddPressed" prefHeight="25.0" prefWidth="124.0" text="Add" />
+      <Button layoutX="504.0" layoutY="835.0" mnemonicParsing="false" onAction="#onUpdatePressed" prefHeight="25.0" prefWidth="124.0" text="Update" />
+      <Button layoutX="648.0" layoutY="835.0" mnemonicParsing="false" onAction="#onDeletePressed" prefHeight="25.0" prefWidth="124.0" text="Delete" />
+      <Button layoutX="972.0" layoutY="31.0" mnemonicParsing="false" onAction="#onCustomerPressed" prefHeight="25.0" prefWidth="124.0" text="Customer" />
+      <Text layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="836.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.controller.ReportController">
+   <children>
+      <Text layoutX="392.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports" textAlignment="CENTER" wrappingWidth="138.13671875">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="countAppointmentsRadio" layoutX="226.0" layoutY="53.0" mnemonicParsing="false" onAction="#onCountAppointments" text="Count Appointments" />
+      <RadioButton fx:id="contactScheduleRadioButton" layoutX="402.0" layoutY="53.0" mnemonicParsing="false" onAction="#onContactRadioPressed" text="Contact Schedule" />
+      <RadioButton fx:id="customerSchedule" layoutX="547.0" layoutY="53.0" mnemonicParsing="false" onAction="#onCustomerSchedule" text="Customer Schedule" />
+      <TableView fx:id="reportTableView" layoutX="12.0" layoutY="104.0" prefHeight="726.0" prefWidth="908.0">
+        <columns>
+          <TableColumn fx:id="columnOne" prefWidth="119.0" />
+          <TableColumn fx:id="columnTwo" prefWidth="116.0" />
+            <TableColumn fx:id="columnThree" minWidth="8.0" prefWidth="118.0" />
+            <TableColumn fx:id="columnFour" prefWidth="134.0" />
+            <TableColumn fx:id="columnFive" prefWidth="171.0" />
+            <TableColumn fx:id="columnSix" prefWidth="156.0" />
+            <TableColumn fx:id="columnSeven" prefWidth="93.0" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboBoxOne" disable="true" layoutX="769.0" layoutY="70.0" onAction="#onComboBoxOne" prefWidth="150.0" visible="false" />
+      <Button layoutX="22.0" layoutY="13.0" mnemonicParsing="false" onAction="#onSchedulePressed" text="Schedule" />
+   </children>
+</AnchorPane>
